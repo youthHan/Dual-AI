@@ -58,10 +58,11 @@ Our methods achieves SOTA results on multiple datasets, including the Volleyball
 ### Citation
 If you use our method or code in your research, please consider citing the paper as follows:
 ```
-@inproceedings{han20hvrnet,
-    Author = {Han, Mingfei and Wang, Yali and Chang, Xiaojun and Qiao, Yu},
-    Title = {Mining Inter-Video Proposal Relations for Video Object Detection},
-    Conference = {ECCV},
-    Year = {2020}
+@inproceedings{han2022dualai,
+  title={Dual-AI: Dual-path Actor Interaction Learning for Group Activity Recognition},
+  author={Han, Mingfei and Zhang, David Junhao and Wang, Yali and Yan, Rui and Yao, Lina and Chang, Xiaojun and Qiao, Yu},
+  booktitle={Conference on Computer Vision and Pattern Recognition},
+  year={2022},
+  organization={IEEE}
 }
 ```
