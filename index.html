@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Dual-path actor interaction learning for Group Activity Recognition that works under various supervision settings.">
+  <meta name="keywords" content="Dual-AI, Group Activity Recognition, Transformer, Spatiotemporal modeling">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dual-AI: Dual-path Actor Interaction Learning for Group Activity Recognition</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://mingfei.info">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+    </div>
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Nerfies: Deformable Neural Radiance Fields</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://mingfei.info/">Mingfei Han</a><sup>*</sup>,</span>
+            <span class="author-block">
+              <a href="https://junhaozhang98.github.io/">David Junhao Zhang</a><sup>*</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=hD948dkAAAAJ/">Yali Wang</a><sup>*</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://ruiyan1995.github.io/">Rui Yan</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.linayao.com/">Lina Yao</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.xiaojun.ai/">Xiaojun Chang</a>,
+            </span>
+            <span class="author-block">
+              <a href="http://mmlab.siat.ac.cn/yuqiao/">Yu Qiao</a><sup>&dagger;</sup>
+            </span>
+          </div>
+
+          <!-- <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>University of Washington,</span>
+            <span class="author-block"><sup>2</sup>Google Research</span>
+          </div> -->
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2204.02148"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2204.02148"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <!-- <span class="link-block">
+                <a href="https://github.com/google/nerfies"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Learning spatial-temporal relation among multiple actors is crucial for group activity recognition. 
+            Different group activities often show the diversified interactions between actors in the video. 
+            Hence, 
+            it is often difficult to model complex group activities from a single view of spatial-temporal actor evolution. 
+          </p>
+          <p>
+            To tackle this problem, 
+            we propose a distinct Dual-path Actor Interaction (Dual-AI) framework, 
+            which flexibly arranges spatial and temporal transformers in two complementary orders, 
+            enhancing actor relations by integrating merits from different spatio-temporal paths. 
+            Moreover, we introduce a novel Multi-scale Actor Contrastive Loss (MAC-Loss) between two interactive paths of Dual-AI. 
+            Via self-supervised actor consistency in both frame and video levels, 
+            MAC-Loss can effectively distinguish individual actor representations to reduce action confusion among different actors. 
+            Consequently, our Dual-AI can boost group activity recognition by fusing such discriminative features of different actors. 
+          </p>
+          <p>
+            To evaluate the proposed approach, 
+            we conduct extensive experiments on the widely used benchmarks, 
+            including Volleyball, 
+            Collective Activity, 
+            and NBA datasets. 
+            The proposed Dual-AI achieves state-of-the-art performance on all these datasets. 
+            It is worth noting the proposed Dual-AI with 50% training data outperforms a number of recent approaches with 100% training data. 
+            This confirms the generalization power of Dual-AI for group activity recognition, 
+            even under the challenging scenarios of limited supervision.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <!-- <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div> -->
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <!-- Animation. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Motivation</h2>
+        
+        <div class="content has-text-justified">
+          <p>
+            Accuracy per Category and Example of left spike and right set group activity. 
+            Red dashed line and Violet dashed line below show spatial and temporal actor interaction respectively.
+          </p>
+        </div>
+        <div class="figure" style="height: 432px; background-image: url(./assets/motivation.png);"></div>
+        <!-- <div class="columns is-vcentered interpolation-panel">
+          <div class="column is-3 has-text-centered">
+            <img src="https://homes.cs.washington.edu/~kpar/nerfies/images/interpolate_start.jpg"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+            <p>Accuracy per Category and Example of left spike and right set group activity. 
+                Red dashed line and Violet dashed line below show spatial and temporal actor interaction respectively.
+            </p>
+          </div>
+        </div> -->
+        <br/>
+        <!--/ Interpolating. -->
+
+      </div>
+    </div>
+    <!--/ Animation. -->
+
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>
+    @inproceedings{han2022dualai,
+        title={Dual-AI: Dual-path Actor Interaction Learning for Group Activity Recognition},
+        author={Han, Mingfei and Zhang, David Junhao and Wang, Yali and Yan, Rui and Yao, Lina and Chang, Xiaojun and Qiao, Yu},
+        booktitle={Conference on Computer Vision and Pattern Recognition},
+        year={2022},
+        organization={IEEE}
+      }</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            Website design from <a
+            href="https://nerfies.github.io/">Nerfies</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
