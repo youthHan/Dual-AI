@@ -1,0 +1,69 @@
+I"×<h3 id="abstract">Abstract</h3>
+<p>Learning spatial-temporal relation among multiple actors is crucial for group activity recognition. 
+Different group activities often show the diversified interactions between actors in the video. 
+Hence, 
+it is often difficult to model complex group activities from a single view of spatial-temporal actor evolution. 
+To tackle this problem, 
+we propose a distinct Dual-path Actor Interaction (Dual-AI) framework, 
+which flexibly arranges spatial and temporal transformers in two complementary orders, 
+enhancing actor relations by integrating merits from different spatio-temporal paths. 
+Moreover, 
+we introduce a novel Multi-scale Actor Contrastive Loss (MAC-Loss) between two interactive paths of Dual-AI. 
+Via self-supervised actor consistency in both frame and video levels, 
+MAC-Loss can effectively distinguish individual actor representations to reduce action confusion among different actors.
+Consequently, 
+our Dual-AI can boost group activity recognition by fusing such discriminative features of different actors. 
+To evaluate the proposed approach, 
+we conduct extensive experiments on the widely used benchmarks, 
+including Volleyball, 
+Collective Activity, 
+and NBA datasets. 
+The proposed Dual-AI achieves state-of-the-art performance on all these datasets. 
+It is worth noting the proposed Dual-AI with 50\% training data outperforms a number of recent approaches with 100\% training data.
+This confirms the generalization power of Dual-AI for group activity recognition, 
+even under the challenging scenarios of limited supervision.</p>
+
+<h3 id="motivation">Motivation</h3>
+
+<figure class="figure  figure--center">
+  <img class="image" src="/assets/motivation.png" alt="" width="" height="" />
+  
+</figure>
+
+<p>Accuracy per Category and Example of <em>left spike</em> and <em>right set</em> group activity. 
+Red dashed line and Violet dashed line below show spatial and temporal actor interaction respectively. With spatial and temporal modeling applied in different orders, ST path and TS path learn different spatiotemporal patterns and thereby are skilled at different classes, supported by the accuracy plot.</p>
+
+<h3 id="remarkable-finding">Remarkable Finding</h3>
+
+<figure class="figure  figure--center">
+  <img class="image" src="/assets/acc_plot.png" alt="" width="" height="" />
+  
+</figure>
+
+<p><em>Accuracy comparison with data in different percentage on Volleyball dataset</em></p>
+
+<p>Our method achieves SOTA performance, and achieves 94.2% with 50% data, which is competitive to a number of recent approaches trained with 100% data. Solid point means result with additional optical flow input.</p>
+
+<h3 id="pipeline">Pipeline</h3>
+
+<figure class="figure  figure--center">
+  <img class="image" src="/assets/pipeline.png" alt="" width="" height="" />
+  
+</figure>
+
+<p>Our Dual-path Actor Interaction (Dual-AI) learning framework, where S-Trans and T-Trans denote Spatial-Transformer and Temporal-transformer respectively. It effectively explores actor evolution in two complementary spatiotemporal views, <em>i.e.</em>, ST path and TS path. Moreover, a Multi-scale Actor Contrastive loss is designed to enable interaction and cooperation of the two paths.</p>
+
+<h3 id="experiments">Experiments</h3>
+<p>Our methods achieves SOTA results on multiple datasets, including the Volleyball Dataset, the Collective Dataset and the NBA Dataset under different kinds of supervision.</p>
+
+<h3 id="citation">Citation</h3>
+<p>If you use our method or code in your research, please consider citing the paper as follows:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@inproceedings{han2022dualai,
+  title={Dual-AI: Dual-path Actor Interaction Learning for Group Activity Recognition},
+  author={Han, Mingfei and Zhang, David Junhao and Wang, Yali and Yan, Rui and Yao, Lina and Chang, Xiaojun and Qiao, Yu},
+  booktitle={Conference on Computer Vision and Pattern Recognition},
+  year={2022},
+  organization={IEEE}
+}
+</code></pre></div></div>
+:ET

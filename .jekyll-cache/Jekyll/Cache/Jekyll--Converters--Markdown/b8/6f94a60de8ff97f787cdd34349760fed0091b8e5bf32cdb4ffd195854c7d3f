@@ -1,0 +1,33 @@
+I"…<h3 id="abstract">Abstract</h3>
+
+<h3 id="motivation">Motivation</h3>
+
+<figure class="figure  figure--center">
+  <img class="image" src="/assets/motivation.png" alt="" width="" height="" />
+  
+</figure>
+
+<p>Accuracy per Category and Example of <em>left spike</em> and <em>right set</em> group activity. 
+Red dashed line and Violet dashed line below show spatial and temporal actor interaction respectively. With spatial and temporal modeling applied in different orders, ST path and TS path learn different spatiotemporal patterns and thereby are skilled at different classes, supported by the accuracy plot.</p>
+
+<h3 id="remarkable-finding">Remarkable Finding</h3>
+
+<figure class="figure  figure--center">
+  <img class="image" src="/assets/acc_plot.png" alt="" width="" height="" />
+  
+</figure>
+
+<p><em>Accuracy comparison with data in different percentage on Volleyball dataset</em></p>
+
+<p>Our method achieves SOTA performance, and achieves 94.2% with 50% data, which is competitive to a number of recent approaches trained with 100% data. Solid point means result with additional optical flow input.</p>
+
+<h3 id="pipeline">Pipeline</h3>
+
+<figure class="figure  figure--center">
+  <img class="image" src="/assets/pipeline.png" alt="" width="" height="" />
+  
+</figure>
+
+<p>Our Dual-path Actor Interaction (Dual-AI) learning framework, where S-Trans and T-Trans denote Spatial-Transformer and Temporal-transformer respectively. It effectively explores actor evolution in two complementary spatiotemporal views, <em>i.e.</em>, ST path and TS path. Moreover, a Multi-scale Actor Contrastive loss is designed to enable interaction and cooperation of the two paths.</p>
+
+:ET
